@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.2 // Porcentaje del elemento visible para activar la animación
+        threshold: 0.15 // Porcentaje del elemento visible para activar la animación
     });
 
     hiddenElements.forEach(el => observer.observe(el));
