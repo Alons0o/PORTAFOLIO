@@ -92,7 +92,6 @@ section {
     background-color: var(--card-color);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Transición para el efecto de hover */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -117,11 +116,9 @@ section {
     background-color: #121212;
     border-radius: 8px;
     border: 1px solid #333;
-    /* Transición para el efecto de levitación */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Efecto de levitación en las tarjetas */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
@@ -164,7 +161,6 @@ ul li {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Efecto de agrandamiento al pasar el cursor en cada habilidad */
 .skill-item:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(209, 196, 183, 0.3);
@@ -175,10 +171,64 @@ ul li {
     font-size: 1.2em;
 }
 
+/* Estilos del formulario de contacto */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #121212;
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: var(--accent-color);
+}
+
+#contact-form button {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: var(--link-hover-color);
+    color: var(--bg-color);
+}
+
 .contact-details {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-top: 1rem;
 }
 
 .contact-details a {
