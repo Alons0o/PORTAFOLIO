@@ -34,9 +34,8 @@ header {
     letter-spacing: 2px;
 }
 
-.contact-info {
-    color: var(--link-color);
-    margin-bottom: 1.5rem;
+nav {
+    margin-top: 20px;
 }
 
 nav a {
@@ -140,19 +139,33 @@ ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Transición para el efecto de hover */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Efecto de agrandamiento al pasar el cursor en cada habilidad */
 .skill-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(209, 196, 183, 0.3); /* Un sutil brillo */
+    box-shadow: 0 0 15px rgba(209, 196, 183, 0.3);
 }
 
 .stars {
     color: gold;
     font-size: 1.2em;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-details a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--link-hover-color);
 }
 
 footer {
