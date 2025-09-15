@@ -1,301 +1,136 @@
-:root {
-    --bg-color: #0a0a0a;
-    --text-color: #f5f5f5;
-    --accent-color: #d1c4b7;
-    --card-color: #1a1a1a;
-    --link-color: #8c7e70;
-    --link-hover-color: #f5f5f5;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Vega Astocóndor - Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <header class="hidden">
+        <div class="header-content">
+            <h1>Diego Vega Astocóndor</h1>
+            <nav>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#formacion">Formación</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    scroll-behavior: smooth;
-}
+    <main>
+        <section id="sobre-mi" class="hidden">
+            <h2 class="section-title">Sobre Mí</h2>
+            <p>Estudiante de <strong>Computación Científica</strong> en la Universidad Nacional Mayor de San Marcos con un fuerte enfoque en programación, algoritmos, estructuras de datos y servicios cloud. Mi objetivo es combinar mis conocimientos en software y hardware para optimizar procesos empresariales y resolver problemas técnicos complejos.</p>
+        </section>
 
-/* Animación de carga en el encabezado */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        <section id="experiencia" class="hidden">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Alwa Perú – Activación de Servicios Cloud</h3>
+                    <p class="date">📅 2024 – Actualidad</p>
+                    <ul>
+                        <li>Implementación de soluciones tecnológicas enfocadas en la transformación digital.</li>
+                        <li>Experiencia con <strong>Microsoft 365 Cloud y ERP Odoo</strong>.</li>
+                        <li>Trabajo con clientes nacionales e internacionales.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Servicio Técnico Independiente</h3>
+                    <p class="date">📅 2022 – 2023</p>
+                    <ul>
+                        <li>Diagnóstico, mantenimiento y reparación de televisores y PCs.</li>
+                        <li>Conocimientos en electrónica básica y resolución de fallas.</li>
+                        <li>Atención a clientes y gestión de reparaciones.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-header {
-    padding: 2rem 1rem;
-    text-align: center;
-    border-bottom: 2px solid var(--accent-color);
-    animation: fadeIn 1s ease-out forwards;
-}
+        <section id="proyectos" class="hidden">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Proyecto X</h3>
+                    <p class="date">Fecha de Creación</p>
+                    <p>Descripción del proyecto. Utiliza este espacio para hablar sobre las tecnologías que usaste y el impacto que tuvo.</p>
+                </div>
+                <div class="card">
+                    <h3>Proyecto Y</h3>
+                    <p class="date">Fecha de Creación</p>
+                    <p>Descripción de otro proyecto. Es una excelente manera de demostrar tus habilidades técnicas y tu capacidad para aplicar tus conocimientos.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="habilidades" class="hidden">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Python <span class="stars">⭐⭐⭐⭐☆</span></div>
+                <div class="skill-item">C++ <span class="stars">⭐⭐⭐☆</span></div>
+                <div class="skill-item">Java <span class="stars">⭐⭐☆</span></div>
+                <div class="skill-item">Cloud Computing <span class="stars">⭐⭐⭐☆</span></div>
+                <div class="skill-item">Microsoft 365 <span class="stars">⭐⭐⭐☆</span></div>
+                <div class="skill-item">ERP Odoo <span class="stars">⭐⭐☆</span></div>
+                <div class="skill-item">Soporte Técnico <span class="stars">⭐⭐⭐</span></div>
+                <div class="skill-item">Git / Control de versiones <span class="stars">⭐⭐⭐</span></div>
+            </div>
+        </section>
+        
+        <section id="formacion" class="hidden">
+            <h2 class="section-title">Formación</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Universidad Nacional Mayor de San Marcos</h3>
+                    <p>Estudiante de Computación Científica</p>
+                </div>
+                <div class="card">
+                    <h3>Curso de Ensamblaje y Reparación de PCs</h3>
+                    <p>Formación práctica en hardware y soporte técnico.</p>
+                </div>
+                <div class="card">
+                    <h3>Certificaciones</h3>
+                    <p><strong>En proceso:</strong> Microsoft 365 Fundamentals (MS-900)</p>
+                </div>
+            </div>
+        </section>
 
-.header-content h1 {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
-}
+        <section id="contacto" class="hidden">
+            <h2 class="section-title">Contacto</h2>
+            <p>Puedes enviarme un mensaje directamente o encontrarme en las siguientes redes:</p>
+            <form action="https://formspree.io/f/your-form-id" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+            <div class="contact-details">
+                <p><strong>Teléfono:</strong> +51 912 844 181</p>
+                <p><strong>Correo:</strong> diego.vegaa@unmsm.edu.pe</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tu-perfil/" target="_blank">Diego Vega Astocóndor</a></p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/alonso_1877" target="_blank">@alonso_1877</a></p>
+            </div>
+        </section>
+    </main>
 
-nav {
-    margin-top: 20px;
-}
+    <footer class="hidden">
+        <p>&copy; 2024 Diego Vega Astocóndor. Todos los derechos reservados.</p>
+    </footer>
 
-nav a {
-    color: var(--link-color);
-    text-decoration: none;
-    margin: 0 1.2rem;
-    font-weight: 700;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--link-hover-color);
-    transition: width 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--link-hover-color);
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-}
-
-section {
-    padding: 3rem 2rem;
-    margin-bottom: 2rem;
-    background-color: var(--card-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.section-title {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    letter-spacing: 5px;
-}
-
-.card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.card {
-    flex: 1;
-    min-width: 300px;
-    padding: 1.5rem;
-    background-color: #121212;
-    border-radius: 8px;
-    border: 1px solid #333;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.card h3 {
-    color: var(--link-hover-color);
-    margin-bottom: 0.5rem;
-}
-
-.date {
-    font-style: italic;
-    color: #999;
-    margin-bottom: 1rem;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-ul li {
-    margin-bottom: 0.5rem;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
-}
-
-.skill-item {
-    background-color: #121212;
-    padding: 1rem;
-    border-left: 4px solid var(--accent-color);
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.skill-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(209, 196, 183, 0.3);
-}
-
-.stars {
-    color: gold;
-    font-size: 1.2em;
-}
-
-/* Estilos del formulario de contacto */
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-#contact-form label {
-    margin-bottom: 0.5rem;
-    color: var(--accent-color);
-    font-weight: 700;
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 1rem;
-    border: 1px solid #333;
-    border-radius: 4px;
-    background-color: #121212;
-    color: var(--text-color);
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-    border-color: var(--accent-color);
-}
-
-#contact-form button {
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#contact-form button:hover {
-    background-color: var(--link-hover-color);
-    color: var(--bg-color);
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 1rem;
-}
-
-.contact-details a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-    color: var(--link-hover-color);
-}
-
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    border-top: 1px solid #333;
-    color: #999;
-}
-
-/* Animación de scroll */
-.hidden {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Personalización de la barra de desplazamiento */
-::-webkit-scrollbar {
-    width: 8px;
-    background-color: var(--card-color);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--accent-color);
-    border-radius: 4px;
-}
-
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2.5rem;
-    }
-
-    nav a {
-        margin: 0 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 1.5rem 0.5rem;
-    }
-    
-    .header-content h1 {
-        font-size: 2rem;
-    }
-    
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-    }
-
-    .card-grid {
-        flex-direction: column;
-    }
-}
+    <script src="script.js"></script>
+</body>
+</html>
