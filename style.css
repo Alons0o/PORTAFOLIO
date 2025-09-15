@@ -21,10 +21,23 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Animación de carga en el encabezado */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 header {
     padding: 2rem 1rem;
     text-align: center;
     border-bottom: 2px solid var(--accent-color);
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .header-content h1 {
@@ -79,7 +92,8 @@ section {
     background-color: var(--card-color);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    /* Transición para el efecto de hover */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .section-title {
@@ -103,6 +117,14 @@ section {
     background-color: #121212;
     border-radius: 8px;
     border: 1px solid #333;
+    /* Transición para el efecto de levitación */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto de levitación en las tarjetas */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .card h3 {
@@ -142,6 +164,7 @@ ul li {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Efecto de agrandamiento al pasar el cursor en cada habilidad */
 .skill-item:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(209, 196, 183, 0.3);
@@ -185,6 +208,17 @@ footer {
 .show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--card-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 4px;
 }
 
 @media (max-width: 768px) {
