@@ -162,7 +162,6 @@ ul li {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Efecto de agrandamiento al pasar el cursor en cada habilidad */
 .skill-item:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(209, 196, 183, 0.3);
@@ -243,11 +242,31 @@ ul li {
     color: var(--link-hover-color);
 }
 
+/* Ajustes para el pie de página y el nuevo botón */
 footer {
     text-align: center;
     padding: 1.5rem;
     border-top: 1px solid #333;
     color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.emoji-button {
+    text-decoration: none;
+    color: #999;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.emoji-button:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.emoji-icon {
+    font-size: 1.5rem;
 }
 
 /* Animación de scroll */
